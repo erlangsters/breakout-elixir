@@ -8,7 +8,8 @@ defmodule Breakout.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      licenses: ["MIT"]
+      licenses: ["MIT"],
+      description: "The Breakout game implemented in Elixir."
     ]
   end
 
