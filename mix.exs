@@ -21,11 +21,11 @@ defmodule Breakout.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:egl, git: "https://github.com/erlangsters/egl-1-5", branch: "master"},
+      {:gl, git: "https://github.com/erlangsters/opengl-es-3.1", branch: "master"},
+      {:glfw, git: "https://github.com/erlangsters/glfw", branch: "master"}
     ]
   end
 end
