@@ -1,0 +1,20 @@
+name: library
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y libegl-dev libglfw3-dev
+      - uses: erlangsters/setup-elixir@v1
+        with:
+          elixir-version: 1.18
+          erlang-version: 28
+          install-rebar3: true
+      - run: mix escript.build
